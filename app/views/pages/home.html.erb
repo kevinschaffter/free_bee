@@ -1,0 +1,32 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+
+<% @item.each do |item| %>
+    <% a_tag = item.at_css('a') %>
+    <% if !!a_tag and a_tag.values.any? and !!item.at_css('h2') %>
+      <li><%= link_to item.at_css('h2').text.squish, a_tag.values.first %></li>
+    <% end %>
+<% end %>
+
+<%#= @titles2 %>
+
+<%# @h.each do |key, value| %>
+
+ <li><%#= link_to key.text, value['href'] %></li>
+
+ <%# end %>
+
+
+
+
+
+<%# @links.each do |link| %>
+	<%# @titles.each do |title| %>
+
+
+
+	<li><%#= link_to title.text, link['href'] %></li>
+	
+	<%# end %>
+<%# end %>
