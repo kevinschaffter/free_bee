@@ -1,32 +1,25 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<% content_for :body_class, 'home-page' %>
+
+<div class="row">
+
+  <div class="col-md-6 bee-container">
+    <%= image_tag 'bee.png', width: '100%' %>
+  </div>
+
+  <div class="col-md-6">
+    <div class="masthead">
+      <h1 class="home-header">Freebee</h1>
+
+      <h4 class="sub-text">A list of the best free things in your city!</h4>
 
 
-<% @item.each do |item| %>
-    <% a_tag = item.at_css('a') %>
-    <% if !!a_tag and a_tag.values.any? and !!item.at_css('h2') %>
-      <li><%= link_to item.at_css('h2').text.squish, a_tag.values.first %></li>
-    <% end %>
-<% end %>
-
-<%#= @titles2 %>
-
-<%# @h.each do |key, value| %>
-
- <li><%#= link_to key.text, value['href'] %></li>
-
- <%# end %>
+      <% if user_signed_in? == true %>
+      <%= link_to "Get Started!", miami_path, class: 'btn btn-primary btn-lg get-started' %>
+      <% else %>
+      <%= link_to "Get Started!", new_user_registration_path, class: 'btn btn-primary btn-lg get-started' %>
+      <% end %>
 
 
-
-
-
-<%# @links.each do |link| %>
-	<%# @titles.each do |title| %>
-
-
-
-	<li><%#= link_to title.text, link['href'] %></li>
-	
-	<%# end %>
-<%# end %>
+    </div>
+  </div>
+</div>

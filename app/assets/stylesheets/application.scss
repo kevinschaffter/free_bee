@@ -15,15 +15,67 @@
  */
 
 
+h1,h2, 
+h3,h4 {
+  font-family: 'Poiret One', cursive;
+  font-weight: 800;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.get-started {
+  background-color: #e67e22;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border: none;
+}
+
+.bee-container {
+  margin-top: 70px;
+}
+
+.get-started:hover {
+  background-color: #e67e22;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+a, a:hover {
+  color: inherit;
+}
+
+.home-header {
+  color: white;
+  font-size: 8.5em;
+}
+
+.sub-text {
+  color: dark-gray;
+  margin-bottom: 30px;
+}
+
+.masthead {
+  margin-right: 40px;
+  text-align: center;
+  margin-top: 127px;
+}
+
+
+.event-header {
+  font-size: 2.2rem;
+  font-family: 'Vollkorn SC';
+  color: #2980b9;
+}
+
 .home-page {
   background-color: #aad0df;
 }
 
 .bee-pic {
+  width: 100%;
   background-image: url(bee.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  
 }
 
 .sign-up-container {
@@ -32,31 +84,34 @@
 }
 
 
+.masthead-title {
+  font-size: 4em;
+}
 
+.hero-image {
+    /* The image used */
+    background-image: url(beach_photo.jpeg);
 
+    /* Set a specific height */
+    height: 400px;
 
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
 
+.hero-text {
+  position: absolute;
+  left: 0px;
+  top: 140px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: #FFF;
+}
 
-/*CSS Override*/
-
-/*textarea:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-.uneditable-input:focus { 
-  border: none;  
-  border-color: rgba(126, 239, 104, 0.8);
-  box-shadow: none;
-  outline: 0 none;
-}*/
+.item-container {
+  padding: 60px 210px 50px 110px;
+}
