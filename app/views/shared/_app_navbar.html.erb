@@ -1,0 +1,19 @@
+<nav class="navbar navbar-inverse navbar-expand-md">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <%= link_to 'FreeBee', root_path, class: 'navbar-brand' %>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <%= link_to 'Cities', index_path, class: 'nav-item nav-link' %>
+    </div>
+    <div class="navbar-nav ml-auto">
+      <%= link_to edit_user_registration_path, class: 'nav-item nav-link' do %>
+      <%= fa_icon 'user', text: 'My Account' %>
+      <% end %>
+      <%= link_to destroy_user_session_path, method: :delete, class: 'nav-item nav-link' do %>
+      <%= fa_icon 'sign-out', text: 'Logout' %>
+      <% end %>
+    </div>
+  </div>
+</nav>

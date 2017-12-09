@@ -1,5 +1,9 @@
 class PagesController < ApplicationController
-  before_action :authenticate_user!
+  layout :resolve_layout
+  before_action :authenticate_user!, except: [:home]
+
+  def index
+  end
 
   def home
   end
@@ -13,6 +17,19 @@ class PagesController < ApplicationController
     page = HTTParty.get(url)
     dom = Nokogiri::HTML(page)
     @item = dom.css(".slideshow")
+  end
+
+  private
+
+  def resolve_layout
+    case action_name
+    when "home"
+      "application"
+    when "miami", "fort_lauderdale"
+      "events_layout"
+    else
+      "events_layout"
+    end
   end
   
 end
