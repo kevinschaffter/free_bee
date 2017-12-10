@@ -3,7 +3,7 @@ class RegistrationsController < Devise::RegistrationsController
   protected
 
   def after_sign_up_path_for(resource)
-    miami_path
+    index_path
   end
 
 end
