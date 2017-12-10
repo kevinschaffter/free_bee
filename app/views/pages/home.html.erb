@@ -14,7 +14,7 @@
 
 
       <% if user_signed_in? == true %>
-      <%= link_to "Get Started!", miami_path, class: 'btn btn-primary btn-lg get-started' %>
+      <%= link_to "Get Started!", index_path, class: 'btn btn-primary btn-lg get-started' %>
       <% else %>
       <%= link_to "Get Started!", new_user_registration_path, class: 'btn btn-primary btn-lg get-started' %>
       <% end %>
