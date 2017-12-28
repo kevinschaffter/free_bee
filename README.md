@@ -1,24 +1,15 @@
-# README
+# Free Bee
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Scraping App:
 
-Things you may want to cover:
+_scrapes and parses two seperate sites for finding free things to do in Miami and Ft. Lauderdale_
 
-* Ruby version
+Features:
 
-* System dependencies
+* Built using Rails 5
 
-* Configuration
+* User authentication with Devise gem
 
-* Database creation
+* Scrapes two different sites
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Bootstrap 4
